@@ -1,3 +1,7 @@
+on:
+  issue:
+  pull_request_target:
+
 jobs:
   debug:
     runs-on: ubuntu-latest
