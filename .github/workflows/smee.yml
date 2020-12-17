@@ -1,5 +1,5 @@
 on:
-  issue:
+  issues:
   pull_request_target:
 
 jobs:
