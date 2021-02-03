@@ -1,0 +1,18 @@
+name: Get linked issues
+on:
+  workflow_dispatch:
+
+jobs:
+  get-linked-issues:
+    name: Get linked issues
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issue numbers separated by commas
+        id: get-issues
+        uses: mondeja/pr-linked-issues-action@master
+        with:
+          repository_owner: rajednom
+          repository_name: gh-actions-webhooks
+          pull_request: 5
+      - name: Print issue numbers
+        run: echo ${{ steps.get-issues.outputs.issues }}
