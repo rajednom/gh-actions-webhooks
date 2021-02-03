@@ -1,0 +1,18 @@
+name: Get linked issues
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - edited
+
+jobs:
+  get-linked-issues:
+    name: Get linked issues
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issue numbers separated by commas
+        id: get-issues
+        uses: mondeja/pr-linked-issues-action@v1.0.0
+      - name: Print issue numbers
+        run: echo ${{ steps.get-issues.outputs.issues }}
