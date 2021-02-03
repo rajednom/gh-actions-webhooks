@@ -1,4 +1,4 @@
-name: Get linked issues
+name: Linked issues for explicit PR
 on:
   workflow_dispatch:
 
